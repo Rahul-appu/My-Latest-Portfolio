@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahul Rajan | PHP Laravel Developer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Cursor Glow Effect -->
+      <div class="cursor-glow"></div>
+
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="container">
+          <a href="#" class="logo">Rahul<span>.</span></a>
+          <button class="menu-toggle" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" class="btn-primary">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="badge">PHP Laravel Developer</span>
+            <h1>Building Secure & <br /><span class="gradient-text">Scalable Solutions</span></h1>
+            <p>
+              Hi, I'm <strong>Rahul Rajan</strong>. A results-driven backend developer with over 2 years of experience delivering government-grade web applications.
+            </p>
+            <div class="hero-btns">
+              <a href="#projects" class="btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+              <a href="#" class="btn-secondary"><i class="fas fa-download"></i> Download Resume</a>
+            </div>
+            
+            <div class="social-links">
+              <a href="https://github.com/Rahul-appu" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="mailto:rahulappu320@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-down">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                I am a backend-focused developer currently working as a <strong>Technical Assistant at Keltron</strong>. My expertise lies in architecting secure, high-performance web applications using <strong>PHP Laravel</strong> and <strong>PostgreSQL</strong>.
+              </p>
+              <p>
+                I have a strong track record of building critical systems for government departments, including the Kerala Election Project and Labour ID Card Systems. I prioritize clean code, security best practices (OTP, CSRF), and system scalability.
+              </p>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <h3>2+</h3>
+                  <p>Years Experience</p>
+                </div>
+                <div class="stat-item">
+                  <h3>10+</h3>
+                  <p>Projects Delivered</p>
+                </div>
+                <!-- Add more stats if needed -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section bg-card">
+        <div class="container">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="skills-grid">
+            <!-- Backend -->
+            <div class="skill-category">
+              <h3>Backend & Database</h3>
+              <div class="skill-tags">
+                <span><i class="fab fa-php"></i> PHP 8</span>
+                <span><i class="fab fa-laravel"></i> Laravel</span>
+                <span><i class="fas fa-database"></i> PostgreSQL</span>
+                <span><i class="fas fa-database"></i> MySQL</span>
+                <span>REST API</span>
+                <span>Eloquent ORM</span>
+              </div>
+            </div>
+            <!-- Frontend -->
+            <div class="skill-category">
+              <h3>Frontend</h3>
+              <div class="skill-tags">
+                <span><i class="fab fa-html5"></i> HTML5</span>
+                <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                <span><i class="fab fa-js"></i> JavaScript</span>
+                <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                <span>Svelte</span>
+              </div>
+            </div>
+            <!-- Tools & Others -->
+            <div class="skill-category">
+              <h3>Tools & Security</h3>
+              <div class="skill-tags">
+                <span><i class="fab fa-git-alt"></i> Git</span>
+                <span>Postman</span>
+                <span>Cursor AI</span>
+                <span>OTP/CSRF</span>
+                <span>Payment Gateways</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="section">
+        <div class="container">
+          <h2 class="section-title">Experience</h2>
+          <div class="timeline">
+            <!-- Job 1 -->
+            <div class="timeline-item">
+              <div class="timeline-date">Aug 2023 ‒ Present</div>
+              <div class="timeline-content">
+                <h3>Technical Assistant</h3>
+                <h4>Keltron (Kerala State Electronics Development Corporation)</h4>
+                <ul>
+                  <li>Developed Laravel applications for multiple government departments focusing on security and scalability.</li>
+                  <li>Built Kerala Election employee management modules (approvals, dashboards, validations).</li>
+                  <li>Designed Labour ID Card Bulk Printing System with QR generation and secure ZIP delivery.</li>
+                  <li>Integrated Easebuzz payment gateway and implemented OTP authentication.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Job 2 -->
+            <div class="timeline-item">
+              <div class="timeline-date">Dec 2022 ‒ May 2023</div>
+              <div class="timeline-content">
+                <h3>Software Engineer Trainee</h3>
+                <h4>Zaeem Technology</h4>
+                <ul>
+                  <li>Developed responsive UI components using Svelte.</li>
+                  <li>Assisted in backend API integration, testing, and deployment.</li>
+                  <li>Collaborated with design and backend teams to improve UX.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section bg-card">
+        <div class="container">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card">
+              <div class="project-content">
+                <h3>Labour ID Card Bulk Printing System</h3>
+                <p class="project-tech">Laravel, PostgreSQL, QR Code, ZIP</p>
+                <p>A high-volume employee processing system featuring duplicate print prevention, QR code generation, and secure ZIP packaging for client-side printing. Optimized for handling large datasets efficiently.</p>
+              </div>
+            </article>
+            <!-- Project 2 -->
+            <article class="project-card">
+              <div class="project-content">
+                <h3>Kerala Election Modules</h3>
+                <p class="project-tech">Laravel, PostgreSQL, Role APIs</p>
+                <p>Employee management modules for the Kerala Election Project. Features include multi-level approval workflows, role-based access control, secure data validation, and audit-ready reporting.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="section">
+        <div class="container">
+          <h2 class="section-title">Education</h2>
+          <div class="education-grid">
+            <div class="edu-card">
+              <h3>Diploma in Computer Engineering</h3>
+              <p>Govt Polytechnic College, Neyyattinkara</p>
+              <span class="edu-year">2018 ‒ 2021</span>
+              <span class="edu-score">87%</span>
+            </div>
+            <div class="edu-card">
+              <h3>Plus Two (Biology Science)</h3>
+              <p>DVMN MHSS Maranalloor</p>
+              <span class="edu-score">79%</span>
+            </div>
+            <div class="edu-card">
+              <h3>SSLC</h3>
+              <p>LFHS Anthiyoorkonam</p>
+              <span class="edu-year">2015 ‒ 2016</span>
+              <span class="edu-score">87%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section">
+        <div class="container text-center">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="contact-subtitle">Interested in working together? Let's talk.</p>
+          <div class="contact-actions">
+            <a href="mailto:rahulappu320@gmail.com" class="btn-primary btn-large"><i class="fas fa-envelope"></i> rahulappu320@gmail.com</a>
+            <a href="https://github.com/Rahul-appu" target="_blank" class="btn-secondary btn-large"><i class="fab fa-github"></i> GitHub</a>
+            <a href="tel:+919895247010" class="btn-secondary btn-large"><i class="fas fa-phone"></i> +91 9895247010</a>
+          </div>
+          <footer class="footer">
+            <p>&copy; 2024 Rahul Rajan. Built with Laravel expertise.</p>
+          </footer>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
