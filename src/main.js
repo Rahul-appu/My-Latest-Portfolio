@@ -11,13 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Navbar Scroll Effect
+  // Navbar Scroll Effect (Throttled)
   const navbar = document.querySelector('.navbar');
+  let isScrolling = false;
+
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+    if (!isScrolling) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        isScrolling = false;
+      });
+      isScrolling = true;
     }
   });
 
@@ -31,8 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        // Optional: Stop observing after reveal if you want it once
-        // observer.unobserve(entry.target);
+        observer.unobserve(entry.target); // Performance: Stop observing once revealed
       }
     });
   }, observerOptions);
@@ -43,26 +50,28 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // 3D Tilt Effect for Project Cards
-  const cards = document.querySelectorAll('.project-card, .stat-box, .skill-category');
+  // 3D Tilt Effect for Project Cards (Desktop Only)
+  if (window.innerWidth > 768) {
+    const cards = document.querySelectorAll('.project-card, .stat-box, .skill-category');
 
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
 
-      const rotateX = ((y - centerY) / centerY) * -10; // Max rotation deg
-      const rotateY = ((x - centerX) / centerX) * 10;
+        const rotateX = ((y - centerY) / centerY) * -10; // Max rotation deg
+        const rotateY = ((x - centerX) / centerX) * 10;
 
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+      });
     });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
-    });
-  });
+  }
 });

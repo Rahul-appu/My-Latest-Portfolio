@@ -908,4 +908,55 @@ h6 {
   .section {
     padding: 5rem 0;
   }
+
+  /* --- Performance Optimizations --- */
+
+  /* Disable Mesh Background Animation */
+  body::before {
+    animation: none;
+    /* Static background backup */
+    background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.1), transparent 70%);
+  }
+
+  /* Disable Floating Shapes */
+  .shape {
+    display: none;
+  }
+
+  /* Remove Glassmorphism (Heavy on GPU) */
+  .navbar,
+  .glass-card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.95);
+    /* Solid fallback */
+  }
+
+  /* Simplify Gradient Text Animation */
+  .gradient-text {
+    animation: none;
+    background-size: 100%;
+  }
+
+  /* Simplify Profile Animation */
+  .profile-img {
+    animation: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Lighter shadow */
+  }
+
+  .profile-container::before,
+  .profile-container::after,
+  .profile-ring {
+    animation: none;
+    display: none;
+    /* Remove ripples for performance */
+  }
+
+  /* Remove Tilt Effects */
+  .project-card:hover,
+  .stat-box:hover {
+    transform: none !important;
+    /* Force disable hover transforms */
+  }
 }
